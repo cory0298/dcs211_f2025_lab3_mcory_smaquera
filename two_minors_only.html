@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<HTML lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <script language="javascript">
+      function bpopup(windowHeight, windowWidth )
+      {
+        window.open("twbkwbis.p_get_email_addr", "EmailWindow", "height=" + windowHeight + ",width=" + windowWidth + ",toolbar=1,MENUBAR=no,LOCATION=no,scrollbars=yes,resizable=yes");
+      }
+      //-->
+      </script>
+<meta http-equiv="Pragma" name="Cache-Control" content="no-cache">
+<meta http-equiv="Cache-Control" name="Cache-Control" content="no-cache">
+<LINK REL="stylesheet" HREF="/css/web_default_mmc_roster.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
+<title>Major/Minor/GEC Rosters</title>
+<meta http-equiv="Content-Script-Type" name="Default_Script_Language" content="text/javascript">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+window.onunload = function() {submitcount=0;}
+var submitcount=0;
+function checkSubmit() {
+if (submitcount == 0)
+   {
+   submitcount++;
+   return true;
+   }
+else
+   {
+alert("Your changes have already been submitted.");
+   return false;
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!-- Hide JavaScript from older browsers 
+//  Function to open a window
+function windowOpen(window_url) {
+   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+   if (document.images) { 
+       if (helpWin) helpWin.focus()
+   }
+}
+//  End script hiding -->
+</SCRIPT>
+</head>
+<body  class="EMPLOYEE_ROLE FACULTY_ROLE">
+<div class="headerwrapperdiv">
+<div class="pageheaderdiv1">
+<a href="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</a>
+<h1>BPROD</h1></DIV><div class="headerlinksdiv">
+<ol class="tabMenu">
+<li class="nav-item GarnetGateway">
+<a href="/bprod/twbkwbis.P_GenMenu?name=menu_Home"  class=" taboff">Garnet Gateway</a>
+</li>
+<li class="nav-item Home">
+<a href="/bprod/twbkwbis.P_GenMenu?name=menu_Home"  class=" taboff">Home</a>
+</li>
+<li class="nav-item Employees">
+<a href="/bprod/twbkwbis.P_GenMenu?name=menu_TabStaff"  class=" taboff">Employees</a>
+</li>
+<li class="nav-item Faculty">
+<a href="/bprod/twbkwbis.P_GenMenu?name=menu_TabFaculty"  class=" tabon">Faculty</a>
+</li>
+<li class="nav-item Events">
+<a href="/bprod/!kgw_events.p_index"  class=" taboff">Events</a>
+</li>
+<li class="nav-item Logout">
+<a href="/bprod/twbkwbis.p_logout"  class=" taboff">Logout</a>
+</li>
+</ol>
+</DIV>
+<table  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox." WIDTH="100%">
+<tr>
+<TD CLASS="pldefault">
+<div class="headerlinksdiv2">
+<form action="/bprod/twbksrch.P_ShowResults" method="post">
+Search
+<SPAN class="fieldlabeltextinvisible"><LABEL for=keyword_in_id><SPAN class="fieldlabeltext">Search</SPAN></LABEL></SPAN>
+<input type="text" name="KEYWRD_IN" size="20" maxlength="65" ID="keyword_in_id" />
+<input type="submit" value="Go" />
+</form>
+</div>
+</TD>
+<TD CLASS="pldefault"><p class="rightaligntext" /p>
+<SPAN class="pageheaderlinks">
+<a href="/bprod/twbksite.P_DispSiteMap?menu_name_in=pg_fy_redirect&amp;depth_in=2&amp;columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</a>
+|
+<a href="/wtlhelp/twbhhelp.htm" accesskey="H" onClick="popup = window.open('/wtlhelp/twbhhelp.htm', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</a>
+|
+<a href="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</a>
+</span>
+</TD>
+</tr>
+</table>
+</DIV>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" /><label for="nav-trigger"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></label>
+<div class="pagebodydiv">
+<div class="pagetitlediv">
+<h2>Major/Minor/GEC Rosters</h2>
+<a name="main_content"></a>
+<div class="staticheaders" >
+</div>
+</DIV>
+<!--  ** END OF twbkwbis.P_OpenDoc **  -->
+<SPAN class="infotext"> <p>Listed below are those students who have completed the major or minor declaration process in your department/program or for your General Education Concentration. </p>
+<p>To sort the list by advisor, student name, student class or email address click on the header of the appropriate column.</p></SPAN>
+<form action="!klw_mmc_roster.p_ctrl" method="get"><input type="hidden" name="pi_p" value="select_mmc"><p><label for="pi_code_type">Student Roster: </label><select name="pi_code_type" id="pi_code_type">
+<option value="DCS:MINOR" SELECTED>Digital and Computational St. Minor</option>
+<option value="C093:CONCENTRATION">GEC C093 Digital/Computational Studies</option>
+</select> <input type="submit" value="View Roster"></p></form>
+<script src="/scripts/jquery/jquery.js" type="text/javascript"></script>
+<script src="/scripts/jquery/jquery.blockUI.js" type="text/javascript"></script>
+<script src="/scripts/jquery/tablesorter/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script src="/scripts/klw_mmc_roster.js" type="text/javascript"></script>
+<p><strong>Number of Students:</strong> 2</p>
+<table id="studentList" class="tablesorter adviseedisplay"><thead><tr><th><span class="acconly">Photo</span></th><th>Name</th><th class="{sorter: false}">Actions</th><th>Class</th><th>Status</th><th>E-Mail Address</th><th><abbr title="Major">MAJ</abbr></th><th><abbr title="Minor">MIN</abbr></th><th><abbr title="General Education Concentration">GEC</abbr></th><th>Advisor</th></tr></thead><tbody>
+<tr class="rowcolor2">
+<td class="stu_name"><a class="view_port" href="!klw_mmc_roster.p_ctrl?pi_p=view_profile&amp;pi_id=000000000" title="Beaniebag, Gumbs"><img src="GYKPICS.p_get_image?p_id=0000000" height="50" width="37" alt=""></a></td>
+<td class="stu_name">Beaniebag, Gumbs</td>
+<td class="actions"><ul><li><a class="view_port" href="!klw_mmc_roster.p_ctrl?pi_p=view_profile&amp;pi_id=000000000">More Info</a></li>
+</ul></td>
+<td>2027</td><td>Active student</td><td><a href="mailto:gbeanieb@bates.edu">gbeanieb@bates.edu</a></td><td><abbr title="Philosophy">PHIL</abbr><br><abbr title="Economics">ECON</abbr></td><td><abbr title="Digital and Computational St.">DCS</abbr></td><td></td><td class="adv_name"><span style="display:none;">Shrout, Anelise</span>Anelise Shrout</td>
+</tr>
+<tr>
+<td class="stu_name"><a class="view_port" href="!klw_mmc_roster.p_ctrl?pi_p=view_profile&amp;pi_id=000000000" title="Snothall, Eggpants"><img src="GYKPICS.p_get_image?p_id=0000000" height="50" width="37" alt=""></a></td>
+<td class="stu_name">Snothall, Eggpants</td>
+<td class="actions"><ul><li><a class="view_port" href="!klw_mmc_roster.p_ctrl?pi_p=view_profile&amp;pi_id=000000000">More Info</a></li>
+</ul></td>
+<td>2026</td><td>Active student</td><td><a href="mailto:esnothal@bates.edu">esnothal@bates.edu</a></td><td><abbr title="Economics">ECON</abbr></td><td><abbr title="Digital and Computational St.">DCS</abbr><br><abbr title="Philosophy">PHIL</abbr></td><td></td><td class="adv_name"><span style="display:none;">Lawson, Barry</span>Barry Lawson</td>
+</tr>
+</tbody></table>
+<div id="profileBlock" style="display: none; width: 100%;"><div id="profileBlockTitleBar"><span id="profileClose">[close]</span></div><div id="profileBlockMain"></div></div>
+
+<!--  ** START OF twbkwbis.P_CloseDoc **  -->
+<table  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page." WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><tr><TD class="bgtabon" width="100%" colSpan=2><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD></tr></table>
+<a href="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</a>
+</DIV>
+<div class="footerbeforediv">
+
+</DIV>
+<div class="footerafterdiv">
+
+</DIV>
+<div class="globalafterdiv">
+
+</DIV>
+<div class="globalfooterdiv">
+
+</DIV>
+<div class="pagefooterdiv">
+<SPAN class="releasetext">Release: 8.5.3</SPAN>
+</DIV>
+<div class="poweredbydiv">
+</DIV>
+<DIV class="div1"></DIV>
+<script src="/scripts/googleAnalytics.js" type="text/javascript"></script>
+<DIV class="div2"></DIV>
+<DIV class="div3"></DIV>
+<DIV class="div4"></DIV>
+<DIV class="div5"></DIV>
+<DIV class="div6"></DIV>
+<div class="banner_copyright"> <br><h5>© 2023 Ellucian Company L.P. and its affiliates.<br></h5></div>
+</body>
+</html>
