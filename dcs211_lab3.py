@@ -18,7 +18,7 @@ def parseMinors(soup) -> Tuple[Dict, Dict]:
     Accepts a BeautifulSoup object containing the DCS minors HTML page.
     Returns a tuple (by_year, by_advisor) of dictionaries.
     
-    Argumentss:
+    Arguments:
         soup: BeautifulSoup object containing parsed HTML
         
     Returns:
@@ -34,11 +34,11 @@ def parseMinors(soup) -> Tuple[Dict, Dict]:
     for row in rows[1:]: 
         cells = row.find_all("td")
         
-        if len(cells) < 7:
+        if len(cells) < 10:
             continue
         
         #Extract student information
-        name_cell = cells[0]
+        name_cell = cells[1]
         name_link = name_cell.find("a", class_="view_port")
         if name_link and name_link.get("title"):
             name = name_link["title"].strip()
@@ -54,16 +54,20 @@ def parseMinors(soup) -> Tuple[Dict, Dict]:
         email = email_link["href"].replace("mailto:", "") if email_link else ""
         
         #Search for year
-        year_text = cells[2].text.strip()
+        year_text = cells[3].text.strip()
         year = year_text if not year_text.isdigit() else int(year_text)
 
         #Search for majors, minors, and GECs
-        majors = [p.strip() for p in cells[3].text.split(",") if p.strip() and p.strip() != "0000"]
-        minors = [p.strip() for p in cells[4].text.split(",") if p.strip() and p.strip() != "0000"]
-        gecs   = [p.strip() for p in cells[5].text.split(",") if p.strip() and p.strip() != "0000"]
+        majors = [p.strip() for p in cells[6].text.split(",") if p.strip() and p.strip() != "0000"]
+        minors = [p.strip() for p in cells[7].text.split(",") if p.strip() and p.strip() != "0000"]
+        gecs   = [p.strip() for p in cells[8].text.split(",") if p.strip() and p.strip() != "0000"]
 
         #Search for advisor
-        advisor = cells[6].text.strip()
+        advisor_cell = cells[9]
+        #Remove any hidden spans - showed advisor twice without
+        for hidden in advisor_cell.find_all("span", style=lambda x: x and "display:none" in x):
+            hidden.decompose()
+        advisor = advisor_cell.text.strip()
 
         stu = Student(name, email, year, majors, minors, gecs, advisor)
 
